@@ -26,7 +26,7 @@ jobs:
      - name: build docker image
        run: docker build -t ${{secrets.DOCKERHUB_USERNAME}}/java-docker-app:latest .
      - name: push image to dockerhub
-       run: docker push ${{secrets.DOCKER_USERNAME}}/java-docker-app:latest
+       run: docker push ${{secrets.DOCKERHUB_USERNAME}}/java-docker-app:latest
      - name: deploy to ec2
        uses: appleboy/ssh-action@v1.1.0
        with:
